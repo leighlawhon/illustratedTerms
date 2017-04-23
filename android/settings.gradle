@@ -1,0 +1,3 @@
+rootProject.name = 'illustratedTerms'
+
+include ':app'
