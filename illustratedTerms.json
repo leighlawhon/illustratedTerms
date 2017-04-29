@@ -1,86 +1,98 @@
 {
-    "javascript": [{
+    "javascript": [
+      {
         "term": "null",
         "illustrations": [{
             "text": "null is an object, what is the pitfall of loggoing typye of bar",
             "image": "",
             "link": "https://www.toptal.com/javascript/interview-questions"
         }]
-    }, {
+      },{
         "term": "global variable",
         "illustrations": [{
             "text": "(function(){ var a = b = 3; })();",
             "image": "",
             "link": "https://www.toptal.com/javascript/interview-questions"
-        }]
-    }, {
+          }]
+      },{
         "term": "this",
-        "illustrations": [{
+        "illustrations": [ {
             "text": "var myObject = { foo: 'bar, func: function() { var self = this; console.log('outer func:  this.foo = '' + this.foo); console.log('outer func:  self.foo = '' + self.foo); (function() { console.log('inner func:  this.foo = ' + this.foo); console.log('inner func:  self.foo = ' + self.foo); }()); } }; myObject.func();",
             "image": "",
             "link": "https://www.toptal.com/javascript/interview-questions"
-        }]
-    }, {
+          }]
+      },{
         "term": "closure",
         "illustrations": [{
             "text": "A function can access all variables defined inside the function. But a function can also access variables defined outside the function (parent). Global variables live as long as your application (your window / your web page) lives. Local variables have short lives. They are created when the function is invoked, and deleted when the function is finished. The problem is, that any script on the page can change the counter, without calling add() because it is global. Create a function that is self-invoking and add a local varaible and the return a function that refferences the variable",
             "image": "dating",
             "link": "https://www.w3schools.com/js/js_function_closures.asp"
         }]
-    }],
-    "react": [{
+      },{
+        "term": "encapsulation",
+        "illustrations": [{
+            "text": "see self-invoking functionlso addition to the @Daniel's answer, passing this to the function is a common pattern to have a reference to the global object",
+            "image": "",
+            "link": "http://stackoverflow.com/questions/3597087/encapsulation-in-javascript"
+        }]
+      },{
+        "term": "headless",
+        "illustrations": [{
+            "text": "without a graphical display.",
+            "image": "",
+            "link": "http://stackoverflow.com/questions/4647719/what-does-headless-mean"
+        }]
+      },{
+        "term": "namespacing",
+        "illustrations": [{
+            "text": "",
+            "image": "",
+            "link": ""
+        }]
+      },{
+        "term": "modules",
+        "illustrations": [{
+            "text": "Like a book chapter, modules are just clusters of words (or code, as the case may be). Anonymous closure, global import, Object Interface, Reveal module",
+            "image": "",
+            "link": "https://medium.freecodecamp.com/javascript-modules-a-beginner-s-guide-783f7d7a5fcc"
+        }]
+      }
+  ],
+  "react": [
+    {
       "term": "setState",
       "illustrations": [{
-          "text": "The first thing React will do when setState is called is merge the object you passed into setState into the current state of the component. This will kick off a process called reconciliation. The end goal of reconciliation is to, in the most efficient way possible, update the UI based on this new state. To do this, React will construct a new tree of React elements (which you can think of as an object representation of your UI). Once it has this tree, in order to figure out how the UI should change in response to the new state, React will diff this new tree against the previous element tree. By doing this, React will then know the exact changes which occurred, and by knowing exactly what changes occurred, will able to minimize its footprint on the UI by only making updates where absolutely necessary.",
-          "image": "dating",
-          "link": "https://tylermcginnis.com/react-interview-questions/"
+        "text": "The first thing React will do when setState is called is merge the object you passed into setState into the current state of the component. This will kick off a process called reconciliation. The end goal of reconciliation is to, in the most efficient way possible, update the UI based on this new state. To do this, React will construct a new tree of React elements (which you can think of as an object representation of your UI). Once it has this tree, in order to figure out how the UI should change in response to the new state, React will diff this new tree against the previous element tree. By doing this, React will then know the exact changes which occurred, and by knowing exactly what changes occurred, will able to minimize its footprint on the UI by only making updates where absolutely necessary.",
+        "image": "dating",
+        "link": "https://tylermcginnis.com/react-interview-questions/"
+      }]
     },{
       "term": "Element and a Component in React",
       "illustrations": [{
           "text": "TSimply put, a React element describes what you want to see on the screen. Not so simply put, a React element is an object representation of some UI. A React component is a function or a class which optionally accepts input and returns a React element (typically via JSX which gets transpiled to a createElement invocation).",
           "image": "",
           "link": "https://tylermcginnis.com/react-interview-questions/"
+      }]
     },{
       "term": "Class Component over a Functional Component",
       "illustrations": [{
           "text": "If your component has state or a lifecycle method(s), use a Class component. Otherwise, use a Functional component.",
           "image": "",
           "link": "https://tylermcginnis.com/react-interview-questions/"
+      }]
     },{
       "term": "refs",
       "illustrations": [{
           "text": "Refs are an escape hatch which allow you to get direct access to a DOM element or an instance of a component. In order to use them you add a ref attribute to your component whose value is a callback function which will receive the underlying DOM element or the mounted instance of the component as its first argument.",
           "image": "",
           "link": "https://tylermcginnis.com/react-interview-questions/"
+      }]
     },{
       "term": "stateless component",
       "illustrations": [{
           "text": "doesn't have a react 'state'/palin javascript. pure functions of their props",
           "image": "",
           "link": "https://tylermcginnis.com/react-interview-questions/"
-    },{
-      "term": "encapsulation",
-      "illustrations": [{
-          "text": "see self-invoking functionlso addition to the @Daniel's answer, passing this to the function is a common pattern to have a reference to the global object",
-          "image": "",
-          "link": "http://stackoverflow.com/questions/3597087/encapsulation-in-javascript"
-    },{
-      "term": "headless",
-      "illustrations": [{
-          "text": "without a graphical display.",
-          "image": "",
-          "link": "http://stackoverflow.com/questions/4647719/what-does-headless-mean"
-    },{
-      "term": "namespacing",
-      "illustrations": [{
-          "text": "",
-          "image": "",
-          "link": ""
-    },{
-      "term": "modules",
-      "illustrations": [{
-          "text": "Like a book chapter, modules are just clusters of words (or code, as the case may be). Anonymous closure, global import, Object Interface, Reveal module",
-          "image": "",
-          "link": "https://medium.freecodecamp.com/javascript-modules-a-beginner-s-guide-783f7d7a5fcc"
-    }]
-}
+        }]
+    }
+]}

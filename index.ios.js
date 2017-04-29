@@ -13,6 +13,7 @@ import {
   View
 } from 'react-native';
 import Flashcard from './components/Flashcard';
+import Data from 'illustratedTerms';
 import styles from './css/index';
 
 var MOCKED_MOVIES_DATA = [

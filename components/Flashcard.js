@@ -10,31 +10,26 @@ import {
 export default class Flashcard extends Component {
   constructor(props) {
     super(props);
-    const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
-    this.state = {
-      ds: ds.cloneWithRows(props.movies),
-    };
+    // console.log(props, 'p questions');
+    // this.state = {
+    //   questions: new ListView.DataSource({
+    //     rowHasChanged: (row1, row2) => row1 !== row2,
+    //   }),
+    //   loaded: false,
+    // };
   }
-
+  // componentDidMount(){
+  //   console.log(this.props, 'component mounted');
+  //   const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
+  //   this.setState({
+  //     questions: ds.cloneWithRows(this.props.questions)
+  //   })
+  // }
   render() {
-    console.log(this.props.styles);
+    console.log(this.props, "FC render");
     const styles= this.props.styles;
     return (
-      <ListView
-        dataSource={this.state.ds}
-        style={styles.listView}
-        renderRow={
-          (movie) =>
-          <View style={styles.container}>
-            <Text>{movie.title}</Text>
-            <Text>{movie.year}</Text>
-            <Image
-              source={{uri: movie.posters.thumbnail}}
-              style={styles.thumbnail}
-            />
-          </View>
-        }
-      />
+      <Text/>
     );
   }
 }
